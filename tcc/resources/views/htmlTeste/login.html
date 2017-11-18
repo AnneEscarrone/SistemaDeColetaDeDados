@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Café Aqui</title>
+        <meta name="csrf-token" content="H8hAr1JxoFrUaBQdwWLtVNyMRU2oNske5q2HsbOw"/>
+    </head>
+    <link href="http://127.0.0.1:8000/css/teste.css" rel="stylesheet">
+
+    <!--<link href="http://127.0.0.1:8000/css/template/teste.css" rel="stylesheet">-->
+    <link rel="stylesheet" id="themify-styles-css" href="http://127.0.0.1:8000/css/template/style.css" type="text/css" media="all">
+    <link rel="stylesheet" id="themify-media-queries-css" href="http://127.0.0.1:8000/css/template/media-queries.css"  type="text/css" media="all">
+    <body class ="home blog">
+        <input id="token" type="hidden" name="_token" value="H8hAr1JxoFrUaBQdwWLtVNyMRU2oNske5q2HsbOw" id="token">
+        <div id="pagewrap">
+            <div id="headerwrap">
+                <header id="header" class="pagewidth">
+                    <hgroup>
+                        <h1 id="site-logo"><a id="linklogo" href="#conteudoPrincipal" tabindex="1">Café aqui</a></h1>	
+                        <h2 id="site-description" tabindex="2" >Experimente o melhor café da internet</h2>
+                    </hgroup>                    
+                    <div id="login" class="social-widget">
+                        <a id="linkEntrar" href="/Login" onclick="controlador.finalizaSecao()" tabindex="4">                            
+                            <input id="entrar" type="submit" value="Minha Conta" tabindex="4">
+                        </a>
+                        <button id="finalizaSessao" type="button" tabindex="5" onclick="controlador.finalizaSecao()">Finalizar Tarefa</button>
+                    </div>                    
+                                        
+                    <nav id="nav">
+                        <ul id="main-nav" class="main-nav clearfix">
+                            <li><a onclick="controlador.finalizaSecao()" id="inicio" href='#'tabindex="6">Início</a></li>
+                            <li><a onclick="controlador.finalizaSecao()" id="quemSomosNos" href="#" tabindex="7">Quem Somos Nós</a>                                
+                            <li><a onclick="controlador.finalizaSecao()" id="galeria" href="#" tabindex="8">Galeria</a></li>
+                            <li><a onclick="controlador.finalizaSecao()" id="contato" href="#" tabindex="9">Contato</a></li>
+                        </ul><!-- /#main-nav --> 
+                    </nav>   
+
+                </header>
+            </div>
+
+            <div id="layout" class="pagewidth clearfix sidebar1">
+                <div id="content">
+                    <div id="list" class="loops-wrapper list-thumb-image">
+                        
+<div class="row" style="margin-left: 250px;" >
+    <div class="span8">
+        <h2 id="informeUsuarioSenha" tabindex="9">
+            <a id="linkInformeUsuarioSenha" tabindex="9" href="#conteudoPrincipal">Logue com seu usuário e senha</a>
+        </h2>
+        <br><br>
+        <form id='conteudoPrincipal' method="post" >
+            <label id="usuario" for="email" tabindex="10">Usuário:</label>
+            <input id="emailOuUsuario" type="text" title="Dígite seu usuário ou E-mail" tabindex="11">
+            <br><br>
+            <label id="senha" for="senha" tabindex="12">Senha:</label>
+            <input id="informeSenha" type="password" title="Dígite sua senha" tabindex="13">            
+            <br><br>
+            <input id="botaoLogar" tabindex="14" type="submit" value="Entrar" title="Pressione para entrar" style="margin-left: 50px;">
+        </form>
+    </div>
+</div>
+<script>
+    window.onload = function () {
+        alert("continuou a sessão!");
+        controlador.coletaEvento();
+    };
+</script>
+ 
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" language="javascript" src="js/CapturadorEventos/Model/CoordenadasMouse.js"></script>
+        <script type="text/javascript" language="javascript" src="js/CapturadorEventos/Model/Elemento.js"></script>
+        <script type="text/javascript" language="javascript" src="js/CapturadorEventos/Model/Mouse.js"></script>
+        <script type="text/javascript" language="javascript" src="js/CapturadorEventos/Model/Teclado.js"></script>
+        <script type="text/javascript" language="javascript" src="js/CapturadorEventos/Model/Evento.js"></script>
+        <script type="text/javascript" language="javascript" src="js/CapturadorEventos/Model/Sessao.js"></script>
+        <script type="text/javascript" language="javascript" src="js/CapturadorEventos/Controller/Controlador.js"></script>
+    </body>
+
+</html>

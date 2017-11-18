@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Café Aqui</title>
+        <meta name="csrf-token" content="H8hAr1JxoFrUaBQdwWLtVNyMRU2oNske5q2HsbOw"/>
+    </head>
+    <link href="http://127.0.0.1:8000/css/teste.css" rel="stylesheet">
+
+    <!--<link href="http://127.0.0.1:8000/css/template/teste.css" rel="stylesheet">-->
+    <link rel="stylesheet" id="themify-styles-css" href="http://127.0.0.1:8000/css/template/style.css" type="text/css" media="all">
+    <link rel="stylesheet" id="themify-media-queries-css" href="http://127.0.0.1:8000/css/template/media-queries.css"  type="text/css" media="all">
+    <body class ="home blog">
+        <input id="token" type="hidden" name="_token" value="H8hAr1JxoFrUaBQdwWLtVNyMRU2oNske5q2HsbOw" id="token">
+        <div id="pagewrap">
+            <div id="headerwrap">
+                <header id="header" class="pagewidth">
+                    <hgroup>
+                        <h1 id="site-logo"><a id="linklogo" href="#conteudoPrincipal" tabindex="1">Café aqui</a></h1>	
+                        <h2 id="site-description" tabindex="2" >Experimente o melhor café da internet</h2>
+                    </hgroup>                    
+                    <div id="login" class="social-widget">
+                        <a id="linkEntrar" href="/login" onclick="controlador.finalizaSecao()" tabindex="4">                            
+                            <input id="entrar" type="submit" value="Minha Conta" tabindex="4">
+                        </a>
+                        <button id="finalizaSessao" type="button" tabindex="5" onclick="controlador.finalizaSecao()">Finalizar Tarefa</button>
+                    </div>                    
+                                        
+                    <nav id="nav">
+                        <ul id="main-nav" class="main-nav clearfix">
+                            <li><a onclick="controlador.finalizaSecao()" id="inicio" href='#'tabindex="6">Início</a></li>
+                            <li><a onclick="controlador.finalizaSecao()" id="quemSomosNos" href="#" tabindex="7">Quem Somos Nós</a>                                
+                            <li><a onclick="controlador.finalizaSecao()" id="galeria" href="#" tabindex="8">Galeria</a></li>
+                            <li><a onclick="controlador.finalizaSecao()" id="contato" href="#" tabindex="9">Contato</a></li>
+                        </ul><!-- /#main-nav --> 
+                    </nav>   
+
+                </header>
+            </div>
+
+            <div id="layout" class="pagewidth clearfix sidebar1">
+                <div id="content">
+                    <div id="list" class="loops-wrapper list-thumb-image">
+                        <h2 id="carrinhoCompras" class="post-title" tabindex="9">
+    <a id="linkCarrinhoCompras" href="#conteudoPrincipal">Carrinho de Compras</a>
+</h2>
+<br><br>
+<article class="post">
+    <figure class="post-image " tabindex="10"><img id="imagemCafeExpresso" src="imagens/cafeExpresso.jpg" alt="xícara e pirez de café expresso em cima de uma messa com grãos de café espalhados sobre a mesa" height="137" width="158"></figure>			  
+    <div id="post-content1" class="post-content" >       
+        <h3 id="conteudoPrincipal" class="post-title"tabindex="11">Expresso</h3>       
+        <p id="descricaoProduto1" tabindex="12">A verdadeira assência do café na sua forma mais concentrada.</p>
+        <p id="precoProduto1" style="color: green" tabindex="13">Preço: 2,00 R$</p>
+        <input id="confirmacaoCompra" type="submit" value="Comprar" tabindex="14" >
+    </div>
+    <!-- /.post-content -->
+</article>
+
+<script>
+    window.onload = function () {
+        alert("continuou a sessão!");
+        controlador.coletaEvento();
+    };
+</script>
+
+ 
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" language="javascript" src="js/CapturadorEventos/Model/CoordenadasMouse.js"></script>
+        <script type="text/javascript" language="javascript" src="js/CapturadorEventos/Model/Elemento.js"></script>
+        <script type="text/javascript" language="javascript" src="js/CapturadorEventos/Model/Mouse.js"></script>
+        <script type="text/javascript" language="javascript" src="js/CapturadorEventos/Model/Teclado.js"></script>
+        <script type="text/javascript" language="javascript" src="js/CapturadorEventos/Model/Evento.js"></script>
+        <script type="text/javascript" language="javascript" src="js/CapturadorEventos/Model/Sessao.js"></script>
+        <script type="text/javascript" language="javascript" src="js/CapturadorEventos/Controller/Controlador.js"></script>
+    </body>
+
+</html>
